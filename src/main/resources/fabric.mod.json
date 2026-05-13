@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "lockonmod",
+	"version": "${version}",
+	"name": "Lock on",
+	"description": "A Zelda-style lock-on added to Minecraft Java by Oathkewpwr.",
+	"authors": [
+		"Oathkewpwr!"
+	],
+	"contact": {
+		"homepage": "https://oathkewpwr.net",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/lockonmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.oathkewpwr.lockonmod.LockOn"
+		],
+		"fabric-datagen": [
+			"net.oathkewpwr.lockonmod.LockOnDataGenerator"
+		],
+		"client": [
+			"net.oathkewpwr.lockonmod.LockOnClient"
+		]
+	},
+	"mixins": [
+		"lockonmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
