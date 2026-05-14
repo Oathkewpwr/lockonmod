@@ -12,7 +12,8 @@ public class LockOnInputHandler {
     public static void register() {
         // TODO: use KeyBindingHelper.registerKeyBinding() to register keybinds
         // Reminder syntax for later: KeyBinding(translationKey, type, defaultKey, category)
-
+        KeyBindingHelper.registerKeyBinding(lockOnKey = new KeyBinding("key.lockonmod.lock_on", InputUtil.Type.MOUSE, 2, "category.lockonmod.general"));
+        KeyBindingHelper.registerKeyBinding(freeLockKey = new KeyBinding("key.lockonmod.free_lock", InputUtil.Type.KEYSYM, 342, "category.lockonmod.general"));
     }
 
     public static void handleInput(LockOnManager manager, ClientPlayerEntity player) {
