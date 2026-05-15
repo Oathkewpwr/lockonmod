@@ -1,0 +1,6 @@
+{
+  "key.lockonmod.lock_on": "Lock On",
+  "key.lockonmod.free_lock": "Free Lock (Hold)",
+  "key.lockonmod.switch_lock": "Switch Lock",
+  "category.lockonmod.general": "Lock-On"
+}

@@ -8,12 +8,14 @@ import net.minecraft.client.util.InputUtil;
 public class LockOnInputHandler {
     public static KeyBinding lockOnKey; // base keybind is M2 (middle mouse button)
     public static KeyBinding freeLockKey; // base keybind is tab; keybind is held to use free lock
+    public static KeyBinding switchLockKey;
 
     public static void register() {
         // TODO: use KeyBindingHelper.registerKeyBinding() to register keybinds
         // Reminder syntax for later: KeyBinding(translationKey, type, defaultKey, category)
         KeyBindingHelper.registerKeyBinding(lockOnKey = new KeyBinding("key.lockonmod.lock_on", InputUtil.Type.MOUSE, 2, "category.lockonmod.general"));
         KeyBindingHelper.registerKeyBinding(freeLockKey = new KeyBinding("key.lockonmod.free_lock", InputUtil.Type.KEYSYM, 342, "category.lockonmod.general"));
+        KeyBindingHelper.registerKeyBinding(switchLockKey = new KeyBinding("key.lockonmod.switch_lock", InputUtil.Type.KEYSYM, 258, "category.lockonmod.general"));
     }
 
     public static void handleInput(LockOnManager manager, ClientPlayerEntity player) {
